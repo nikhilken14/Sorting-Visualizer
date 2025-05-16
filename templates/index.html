@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        #bars { display: flex; align-items: flex-end; height: 300px; margin-top: 20px; }
+        .bar { margin: 1px; background: #6200ee; width: 20px; transition: height 0.3s; }
+    </style>
+</head>
+<body class="p-4 bg-light">
+    <div class="container">
+        <h2 class="mb-4">Sorting Visualizer</h2>
+        <form id="sortForm">
+            <div class="mb-3">
+                <label for="numbers" class="form-label">Enter numbers (comma-separated):</label>
+                <input type="text" class="form-control" id="numbers" required placeholder="e.g., 5,3,8,1,2">
+            </div>
+            <div class="mb-3">
+                <label for="algorithm" class="form-label">Choose sorting algorithm:</label>
+                <select class="form-select" id="algorithm" required>
+                    <option>Bubble Sort</option>
+                    <option>Insertion Sort</option>
+                    <option>Selection Sort</option>
+                    <option>Quick Sort</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Start</button>
+            <button type="button" id="resetBtn" class="btn btn-secondary ms-2">Reset</button>
+        </form>
+
+        <div id="bars" class="mt-4"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
